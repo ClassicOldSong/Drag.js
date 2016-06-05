@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Drag.js</title>
+	<script src="/blyde.min.js"></script>
+	<script src="/src/drag.js"></script>
+	<style>
+		html {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>Drag.js Demo</h1>
+	<h3>Drag ANY element on this page!</h3>
+	<div id="dragTest" style="height: 80px; width: 160px; background: #000; border-top: 3px solid #F00;"></div>
+	<button>hhh</button><button>23333333333333333333333</button>
+	<br>
+	<input type="text">
+	<script>
+		"use strict";
+		$(() => {
+			let allNodes = $qa('body>*');
+			for (let i of allNodes) {
+				i.on('mousedown', () => i.startDrag());
+				document.addEventListener('mouseup', () => i.dragRelease());
+			}
+		});
+	</script>
+</body>
+</html>
