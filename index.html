@@ -3,57 +3,47 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 	<title>Drag.js</title>
 	<script src="blyde.min.js"></script>
 	<script src="src/drag.js"></script>
-	<script>
-		"use strict";
-		$(() => {
-			let allNodes = $qa('body>*');
-			for (let i of allNodes) {
-				let tagName = i.tagName.toUpperCase();
-				if (!(tagName === "SCRIPT" || tagName === "STYLE" || tagName === "LINK" || tagName === "BR")) {
-					let _this = i;
-					_this.on('mousedown', () => _this.startDrag());
-					document.addEventListener('mouseup', () => {
-						_this.dragRelease();
-						if (_this.dragCase) {
-							_this.dragCase.dragger.targetX = _this.dragCase.dragger.startX;
-							_this.dragCase.dragger.targetY = _this.dragCase.dragger.startY;
-						}
-					});
-					document.addEventListener('dblclick', () => {
-						_this.stopDrag();
-					});
-				}
-			}
-		});
-	</script>
-	<style>
-		html {
-			-webkit-touch-callout: none;
-			-webkit-user-select: none;
-			-khtml-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
-		}
-	</style>
+	<script src="demo.js"></script>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body onselectstart="return false;">
-	<h1 style="background-color: #CCC">Drag.js Demo</h1>
-	<h3 style="background-color: #66CCFF">Drag ANY element on this page!</h3>
-	<h3 style="background-color: #33FF88">Double click anywhere to restore</h3>
-	<div id="dragTest" style="height: 80px; width: 20px; background: #000; border-top: 3px solid #F00; float: left;"></div>
-	<div id="dragTest" style="height: 80px; width: 100px; background: #000; border-top: 3px solid #55FF22; float: left;"></div>
-	<div id="dragTest" style="height: 80px; width: 180px; background: #000; border-top: 3px solid #33EEFF; float: left;"></div>
-	<br style="clear: both;">
-	<button>Drag me!</button><button>And also try to drag me!</button>
-	<br>
-	<input type="text" value="Some text"><input type="radio"><input type="checkbox">
-	<br>
-	<textarea name="" id="" cols="30" rows="10">A lot of texxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxt</textarea>
-	<br>
-	<img src="Ruby.jpg" alt="Ruby Rose" style="height: 200px;" ondragstart="return false">
+	<div class="mainFrame">
+		<div class="contentFrame">
+			<div>
+				<h1>Drag.js</h1>
+				<h2>A really cute dragger addone</h2>
+			</div>
+			<div>
+				<div class="section">
+					<p class="sub">A very common usage</p>
+					<p>Drag items between containers</p>
+					<div class="center">
+						<div class="listContainer">
+							<div class="listItem">Item 1</div>
+							<div class="listItem">Item 2</div>
+							<div class="listItem">Item 3</div>
+							<div class="listItem">Item 4</div>
+						</div>
+						<div class="listContainer">
+							<div class="listItem">Drop items here</div>
+							<div class="listItem">Just more items</div>
+							<div class="listItem">Lalala</div>
+						</div>
+						<div class="listContainer">
+							<div class="listItem">Also drop here</div>
+							<div class="listItem">Drag me!</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="links">
+				<a href="https://github.com/ClassicOldSong/Drag.js" target="_blank">View on GitHub</a> | <a href="https://nzone.link" target="_blank">Visit NZone!</a> | <a href="http://classicoldsong.me" target="_blank">Visit my blog</a>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
