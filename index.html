@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 	<title>Drag.js</title>
 	<script src="blyde.min.js"></script>
-	<script src="src/drag.js"></script>
-	<script src="demo.js"></script>
+	<script src="dist/drag.min.js"></script>
+	<script src="demo.min.js"></script>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body onselectstart="return false;">
@@ -15,29 +15,54 @@
 		<div class="contentFrame">
 			<div>
 				<h1>Drag.js</h1>
-				<h2>A really cute dragger addone</h2>
+				<h2>A really cute dragger addone for <a href="https://github.com/ClassicOldSong/Blyde" target="_blank">Blyde</a></h2>
 			</div>
 			<div>
 				<div class="section">
 					<p class="sub">A very common usage</p>
 					<p>Drag items between containers</p>
 					<div class="center">
-						<div class="listContainer">
+						<div class="centerItem listContainer">
 							<div class="listItem">Item 1</div>
 							<div class="listItem">Item 2</div>
 							<div class="listItem">Item 3</div>
 							<div class="listItem">Item 4</div>
 						</div>
-						<div class="listContainer">
+						<div class="centerItem listContainer">
 							<div class="listItem">Drop items here</div>
 							<div class="listItem">Just more items</div>
 							<div class="listItem">Lalala</div>
 						</div>
-						<div class="listContainer">
+						<div class="centerItem listContainer">
 							<div class="listItem">Also drop here</div>
 							<div class="listItem">Drag me!</div>
 						</div>
 					</div>
+					<p><small>*On mobile devices you may need to click on the target to drop the item</small></p>
+				</div>
+				<div class="section">
+					<p class="sub">Something about weight... Yeah that's weight</p>
+					<p>Bigger items might not be that dynamic (slightly different)</p>
+					<p>Click on elements below in order and drag them to see the tiny difference</p>
+					<div class="center">
+						<div class="centerItem item huge">HUGE</div>
+						<div class="centerItem item big">Big</div>
+						<div class="centerItem item small">small</div>
+						<div class="centerItem item tiny">tiny</div>
+					</div>
+					<p>Click <a id="restoreItemBtn">here</a> to restore</p>
+				</div>
+				<div class="section">
+					<p class="sub">Want something more?</p>
+					<p>Open the console, select any element on this page and use "element.startDrag()" to drag it, if you would like to, you can set the size of the dragger like "element.startDrag('124px', '50px')". Use "element.dragRelease()" to release the drag, "element.stopDrag()" to stop dragging and return to the original place immediately or "element.moveTo(x,y)" to move the elemet to a specific coordinate.</p>
+					<p>Try it out yourself to see what's happening.</p>
+					<div class="center">
+						<img src="Ruby.jpg" alt="Ruby Rose" width="500px">
+					</div>
+				</div>
+				<div class="section">
+					<p class="sub">License</p>
+					<p><a href="https://cos.mit-license.org/" target="_blank">MIT</a>, &copy; <a href="https://github.com/ClassicOldSong" target="_blank">ClassicOldSong</p>
 				</div>
 			</div>
 			<div class="links">

@@ -2,9 +2,17 @@
 "use strict";
 {
 	let mouseX = 0, mouseY = 0;
-	window.addEventListener('mousemove', (e) => {
+	window.on('mousemove', (e) => {
 		mouseX = e.clientX;
 		mouseY = e.clientY;
+	});
+	window.on('touchmove', (e) => {
+		mouseX = e.touches[0].clientX;
+		mouseY = e.touches[0].clientY;
+	});
+	window.on('touchstart', (e) => {
+		mouseX = e.touches[0].clientX;
+		mouseY = e.touches[0].clientY;
 	});
 
 	const createCase = (node) => {
@@ -49,7 +57,7 @@
 			}
 		}
 
-		let diffDeg = Math.tan(diffX/(Math.abs(this.dragger.posY - mouseY) + Math.sqrt(this.clientHeight*this.clientWidth)*2 + 100 + Math.abs(diffX)))/Math.PI*180;
+		let diffDeg = Math.tan(diffX/(Math.abs(this.dragger.posY - mouseY) + Math.sqrt(Math.pow(this.clientHeight, 2) + Math.pow(this.clientWidth, 2))*2 + 100 + Math.abs(diffX)))/Math.PI*180;
 		if (diffDeg > 60) {
 			diffDeg = 60;
 		} else if (diffDeg < -60) {
@@ -107,10 +115,10 @@
 					} else {
 						this.dragHolder.swap(this);
 					}
-					this.dragCase.remove();
 					this.dragHolder.remove();
-					this.dragCase = null;
+					this.dragCase.remove();
 					this.dragHolder = null;
+					this.dragCase = null;
 				}
 				return this;
 			},
