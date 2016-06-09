@@ -14,7 +14,7 @@ Smooth even on MTK devices
 Notice
 ------------
 
-*Blyde **DOES NOT** compatible with jQuery!!*
+*Blyde* ***DOES NOT*** *compatible with jQuery!!*
 
 Maybe Drag.js is a little bit difficult to use, but it worth it!
 
