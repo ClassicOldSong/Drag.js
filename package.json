@@ -1,12 +1,12 @@
 {
   "name": "drag-js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A really cute dragger addone for Blyde",
   "scripts": {
     "test": "gulp",
     "dev": "gulp",
     "build": "gulp"
-    },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ClassicOldSong/Drag.js.git"
@@ -33,5 +33,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.3",
     "uglify-js": "^2.6.2"
+  },
+  "dependencies": {
+    "blyde": "^0.0.3"
   }
 }
