@@ -1,7 +1,7 @@
 Drag.js
 ========
 
-[Demo](https://classicoldsong.github.io/Drag.js)
+[Demo](http://drag.js.org)
 
 A really cute dragger addone for [Blyde](https://github.com/ClassicOldSong/Blyde), inspired by the dragging effect of [FL Studio](https://www.image-line.com/flstudio/)
 
