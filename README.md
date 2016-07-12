@@ -1,6 +1,8 @@
 Drag.js
 ========
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/ClassicOldSong/Drag.js/master/LICENSE) [![npm](https://img.shields.io/npm/dt/drag-js.svg?style=flat-square)](https://www.npmjs.com/package/drag-js)
+
 [Demo](http://drag.js.org)
 
 A really cute dragger addone for [Blyde](https://github.com/ClassicOldSong/Blyde), inspired by the dragging effect of [FL Studio](https://www.image-line.com/flstudio/)
